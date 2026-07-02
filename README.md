@@ -20,6 +20,10 @@ Mobile:
 
 ![Featured product stock mobile preview](docs/images/featured-product-mobile.png)
 
+Admin configuration:
+
+![Featured product stock admin configuration](docs/images/admin-configuration.png)
+
 ## Features
 
 - Configurable featured product by SKU.
