@@ -7,12 +7,6 @@ Technical assessment module for Magento Open Source. It adds a full-width featur
 The module is available at:
 
 ```text
-src/app/code/TechTest/FeaturedProductStock
-```
-
-When installing it in another Magento instance, copy it to:
-
-```text
 app/code/TechTest/FeaturedProductStock
 ```
 
@@ -59,5 +53,5 @@ The default SKU is `24-MB01`, which exists in Magento sample data.
 See the full module documentation:
 
 ```text
-src/app/code/TechTest/FeaturedProductStock/README.md
+app/code/TechTest/FeaturedProductStock/README.md
 ```
