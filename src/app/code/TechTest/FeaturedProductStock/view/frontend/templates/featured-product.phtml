@@ -1,0 +1,47 @@
+<?php
+/**
+ * Featured product homepage block.
+ *
+ * @var \TechTest\FeaturedProductStock\Block\FeaturedProduct $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$viewModel = $block->getViewModel();
+$product = $viewModel?->getProduct();
+?>
+<?php if ($viewModel && $viewModel->isEnabled() && $product): ?>
+    <section class="featured-product-stock" aria-label="<?= $escaper->escapeHtmlAttr(__('Featured Product')) ?>">
+        <a class="featured-product-stock__link"
+           href="<?= $escaper->escapeUrl($viewModel->getProductUrl()) ?>"
+           aria-label="<?= $escaper->escapeHtmlAttr(__('View %1', $viewModel->getProductName())) ?>">
+            <span class="featured-product-stock__media">
+                <img class="featured-product-stock__image"
+                     src="<?= $escaper->escapeUrl($viewModel->getImageUrl()) ?>"
+                     alt="<?= $escaper->escapeHtmlAttr($viewModel->getProductName()) ?>"
+                     loading="eager"/>
+            </span>
+            <span class="featured-product-stock__content">
+                <span class="featured-product-stock__eyebrow">
+                    <?= $escaper->escapeHtml(__('Featured Product')) ?>
+                </span>
+                <strong class="featured-product-stock__title">
+                    <?= $escaper->escapeHtml($viewModel->getProductName()) ?>
+                </strong>
+                <span class="featured-product-stock__price">
+                    <?= $escaper->escapeHtml($viewModel->getFormattedPrice()) ?>
+                </span>
+                <span class="featured-product-stock__stock-host"
+                      data-bind="scope: 'featuredProductStock'">
+                    <!-- ko template: getTemplate() --><!-- /ko -->
+                </span>
+            </span>
+        </a>
+    </section>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayoutJson() ?>
+        }
+    }
+    </script>
+<?php endif; ?>

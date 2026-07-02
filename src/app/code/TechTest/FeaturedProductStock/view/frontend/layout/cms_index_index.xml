@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="TechTest\FeaturedProductStock\Block\FeaturedProduct"
+                   name="techtest.featured.product.stock"
+                   template="TechTest_FeaturedProductStock::featured-product.phtml"
+                   before="-"
+                   ifconfig="featured_product_stock/general/enabled">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">TechTest\FeaturedProductStock\ViewModel\FeaturedProduct</argument>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="featuredProductStock" xsi:type="array">
+                                <item name="component" xsi:type="string">TechTest_FeaturedProductStock/js/view/stock</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">TechTest_FeaturedProductStock/stock</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

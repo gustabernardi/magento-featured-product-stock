@@ -1,0 +1,12 @@
+<span class="featured-product-stock__stock"
+      data-bind="css: {
+          'featured-product-stock__stock--loading': isLoading,
+          'featured-product-stock__stock--error': hasError,
+          'featured-product-stock__stock--out': !isAvailable()
+      }">
+    <span class="featured-product-stock__stock-label" data-bind="text: stockLabel"></span>
+    <strong class="featured-product-stock__stock-value"
+            data-bind="visible: shouldShowQty, text: formattedQty"></strong>
+    <span class="featured-product-stock__stock-note"
+          data-bind="visible: hasError, i18n: 'Stock temporarily unavailable'"></span>
+</span>
