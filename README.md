@@ -10,6 +10,16 @@ The module is available at:
 app/code/TechTest/FeaturedProductStock
 ```
 
+## Preview
+
+Desktop:
+
+![Featured product stock desktop preview](docs/images/featured-product-desktop.png)
+
+Mobile:
+
+![Featured product stock mobile preview](docs/images/featured-product-mobile.png)
+
 ## Features
 
 - Configurable featured product by SKU.
