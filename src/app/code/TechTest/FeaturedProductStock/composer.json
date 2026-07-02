@@ -1,0 +1,14 @@
+{
+    "name": "techtest/module-featured-product-stock",
+    "description": "Displays a configurable featured product on the homepage with live salable stock updates.",
+    "type": "magento2-module",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "TechTest\\FeaturedProductStock\\": ""
+        }
+    }
+}

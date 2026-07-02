@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <featured_product_stock>
+            <general>
+                <enabled>1</enabled>
+                <product_sku>24-MB01</product_sku>
+                <poll_interval>5000</poll_interval>
+            </general>
+        </featured_product_stock>
+    </default>
+</config>
